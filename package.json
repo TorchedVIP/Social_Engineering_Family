@@ -1,0 +1,15 @@
+{
+  "name": "social-engineering-family-night",
+  "version": "1.0.0",
+  "description": "Saintcon Family Night Social Engineering Booth - Educational hacking game for kids",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.18.2"
+  },
+  "keywords": ["saintcon", "social-engineering", "education", "cybersecurity"],
+  "license": "MIT"
+}

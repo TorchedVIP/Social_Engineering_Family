@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Engineering Challenge - Saintcon Family Night</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="container">
+    
+    <!-- Header -->
+    <header>
+      <h1 class="glitch" data-text="SOCIAL ENGINEERING LAB">SOCIAL ENGINEERING LAB</h1>
+      <p class="subtitle">Saintcon Family Night &bull; Cybersecurity Challenge</p>
+    </header>
+
+    <!-- Intro Section -->
+    <section id="intro-section" class="panel">
+      <div class="intro-content">
+        <h2>🕵️ What is Social Engineering?</h2>
+        <p>
+          Social engineering is when someone tricks people into giving away private information 
+          — like passwords, security answers, or personal details. Hackers don't always use 
+          computers to break in... sometimes they just <strong>ask nicely</strong> or find clues 
+          people leave behind!
+        </p>
+        <div class="info-box">
+          <h3>🎯 Your Mission:</h3>
+          <p>
+            Below are some fake accounts. Each one has clues and hints that a social engineer 
+            might find on social media, in conversations, or lying around. Use the clues to 
+            figure out usernames, passwords, and security question answers to "hack" into 
+            each account!
+          </p>
+          <p class="warning-text">
+            ⚠️ Remember: These are FAKE accounts for learning. Never try this on real accounts!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Account List Section -->
+    <section id="accounts-section" class="panel">
+      <h2>📋 Target Accounts</h2>
+      <div id="accounts-grid" class="accounts-grid">
+        <!-- Dynamically populated -->
+      </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login-section" class="panel hidden">
+      <button class="back-btn" onclick="goBack()">← Back to Targets</button>
+      <h2>🔐 Account Login</h2>
+      <div class="target-info">
+        <p>Target: <span id="target-name" class="highlight"></span></p>
+        <p class="hint-text">Hint: <span id="target-hint"></span></p>
+      </div>
+      <form id="login-form" class="hack-form">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" placeholder="Enter username..." autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="text" id="password" placeholder="Enter password..." autocomplete="off">
+        </div>
+        <button type="submit" class="btn-hack">ATTEMPT LOGIN →</button>
+      </form>
+      <p id="login-error" class="error-msg hidden"></p>
+    </section>
+
+    <!-- Security Questions Section -->
+    <section id="security-section" class="panel hidden">
+      <button class="back-btn" onclick="goBack()">← Back to Targets</button>
+      <h2>🛡️ Security Verification</h2>
+      <div class="target-info">
+        <p>Target: <span id="security-target-name" class="highlight"></span></p>
+        <p class="success-msg">✓ Login successful! Now bypass security questions...</p>
+      </div>
+      <form id="security-form" class="hack-form">
+        <div id="questions-container">
+          <!-- Dynamically populated -->
+        </div>
+        <button type="submit" class="btn-hack">VERIFY IDENTITY →</button>
+      </form>
+      <p id="security-error" class="error-msg hidden"></p>
+    </section>
+
+    <!-- Win Screen -->
+    <section id="win-section" class="panel hidden">
+      <div class="win-content">
+        <div class="win-animation">
+          <h2 class="access-granted glitch" data-text="ACCESS GRANTED">ACCESS GRANTED</h2>
+          <div class="trophy">🏆</div>
+          <div class="confetti-container" id="confetti"></div>
+        </div>
+        <p class="win-text">You successfully hacked into <span id="win-target" class="highlight"></span>'s account!</p>
+        <div class="lesson-box">
+          <h3>🧠 What Did You Learn?</h3>
+          <p>A social engineer could find this info from:</p>
+          <ul>
+            <li>Social media posts and profiles</li>
+            <li>Overhearing conversations</li>
+            <li>Looking at someone's desk or belongings</li>
+            <li>Asking friends or family members</li>
+          </ul>
+          <p><strong>Protect yourself:</strong> Use strong, unique passwords and don't share personal details online!</p>
+        </div>
+        <button class="btn-hack" onclick="resetToAccounts()">← Try Another Account</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with 💚 for Saintcon Family Night | Teaching kids about cybersecurity safety</p>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

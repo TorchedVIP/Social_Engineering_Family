@@ -1,0 +1,380 @@
+[
+  {
+    "id": "acct1",
+    "name": "Captain Cyber",
+    "username": "captain_cyber",
+    "password": "StarShield99",
+    "difficulty": "easy",
+    "hint": "captain_cyber online, Texan in-person. Their pet is out of this world!",
+    "loginHints": [
+      "Their username is their hero name smashed together with an underscore.",
+      "The password is about stars and protection... with a number at the end.",
+      "Username: captain_cyber | Password ends with 99 and starts with Star..."
+    ],
+    "securityQuestions": [
+      {
+        "question": "What is the name of your pet?",
+        "answer": "Rocket",
+        "hints": [
+          "It's something that flies into space.",
+          "Think about what launches astronauts into orbit.",
+          "It rhymes with 'pocket' and blasts off!"
+        ]
+      },
+      {
+        "question": "What city were you born in?",
+        "answer": "Houston",
+        "hints": [
+          "A famous space city in Texas.",
+          "'_____, we have a problem!'",
+          "It starts with H and is NASA's home base."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acct2",
+    "name": "Professor Pixel",
+    "username": "prof.pixel",
+    "password": "8bitWorld",
+    "difficulty": "easy",
+    "hint": "A retro gaming teacher who grew up in the arcade era.",
+    "loginHints": [
+      "Professors are sometimes shortened to 'prof' — and their last name is their identity.",
+      "The password is about old-school gaming resolution... how many bits?",
+      "Username: prof.pixel | Password: the number of bits in retro games + 'World'"
+    ],
+    "securityQuestions": [
+      {
+        "question": "What is your favorite video game?",
+        "answer": "Pac-Man",
+        "hints": [
+          "A classic 1980s arcade game about eating dots.",
+          "You play as a yellow circle running from ghosts.",
+          "It starts with 'Pac' and ends with 'Man'."
+        ]
+      },
+      {
+        "question": "What was the name of your first school?",
+        "answer": "Pixel Academy",
+        "hints": [
+          "The school is named after tiny screen dots.",
+          "It's an academy for something you see on screens.",
+          "Two words: ___ Academy (same as their last name)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acct3",
+    "name": "Binary Betty",
+    "username": "betty_binary",
+    "password": "Zero1One0",
+    "difficulty": "easy",
+    "hint": "She thinks in ones and zeros. Her cat has a number name.",
+    "loginHints": [
+      "Her username is her first name, underscore, then her last name.",
+      "The password mixes the words for 0 and 1 with actual digits.",
+      "Username: betty_binary | Password alternates Zero/One with 1/0."
+    ],
+    "securityQuestions": [
+      {
+        "question": "What is the name of your cat?",
+        "answer": "One",
+        "hints": [
+          "It's a number name — and it's not zero!",
+          "In binary, it's the other digit besides 0.",
+          "The number between zero and two."
+        ]
+      },
+      {
+        "question": "What is your favorite food?",
+        "answer": "Pizza",
+        "hints": [
+          "A very popular food that comes in slices.",
+          "It's round, cheesy, and has toppings.",
+          "Starts with P, ends with A, has two Z's."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acct4",
+    "name": "Shadow Fox",
+    "username": "shadowfox",
+    "password": "NightRun42",
+    "difficulty": "medium",
+    "hint": "A sneaky nocturnal creature who loves running at night.",
+    "loginHints": [
+      "The username is both parts of their name stuck together, no spaces.",
+      "The password combines nighttime + their hobby + a number.",
+      "Username: shadowfox | Password: Night + Run + the answer to life, the universe, and everything."
+    ],
+    "securityQuestions": [
+      {
+        "question": "What is your mother's maiden name?",
+        "answer": "Blackwood",
+        "hints": [
+          "Think dark colors and nature.",
+          "A color + a material that trees are made of.",
+          "Black + Wood = ?"
+        ]
+      },
+      {
+        "question": "What street did you grow up on?",
+        "answer": "Elm Street",
+        "hints": [
+          "A famous street from horror movies.",
+          "It's named after a type of tree — and Freddy lives there.",
+          "___ Street — the tree is an Elm!"
+        ]
+      },
+      {
+        "question": "What is your favorite color?",
+        "answer": "Purple",
+        "hints": [
+          "It's a mix of red and blue.",
+          "Royalty often wears this color.",
+          "Starts with P, rhymes with 'urple'."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acct5",
+    "name": "Dr. Glitch",
+    "username": "dr_glitch",
+    "password": "BugSquash7",
+    "difficulty": "medium",
+    "hint": "A doctor who fixes computer problems. Went to school in Massachusetts.",
+    "loginHints": [
+      "Username follows the pattern: title_lastname (with underscore).",
+      "The password is about eliminating bugs... squishing them!",
+      "Username: dr_glitch | Password: Bug + Squash + a single digit number."
+    ],
+    "securityQuestions": [
+      {
+        "question": "What is the name of your pet?",
+        "answer": "Byte",
+        "hints": [
+          "A computer term for a unit of data.",
+          "8 bits make one of these.",
+          "Sounds like 'bite' but spelled the computer way."
+        ]
+      },
+      {
+        "question": "What was your high school mascot?",
+        "answer": "Eagles",
+        "hints": [
+          "A large bird of prey.",
+          "America's national bird.",
+          "Starts with E — it's an Eagle!"
+        ]
+      },
+      {
+        "question": "What city did you go to college in?",
+        "answer": "Boston",
+        "hints": [
+          "A major city in Massachusetts.",
+          "Famous for its tea party and Red Sox.",
+          "Starts with B, ends with 'oston'."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acct6",
+    "name": "Frank",
+    "username": "frank",
+    "password": "BlockAll",
+    "difficulty": "medium",
+    "hint": "He blocks everything! Born in the windy city, drives a red car.",
+    "loginHints": [
+      "His username is just his first name, simple as that.",
+      "The password is literally what he does — blocks things.",
+      "Username: frank | Password: Block + All (capitalize each word)."
+    ],
+    "securityQuestions": [
+      {
+        "question": "What city were you born in?",
+        "answer": "Chicago",
+        "hints": [
+          "Known as 'The Windy City'.",
+          "Deep dish pizza and Lake Michigan.",
+          "Starts with 'Chi' — it's Chicago!"
+        ]
+      },
+      {
+        "question": "What color is your car?",
+        "answer": "Red",
+        "hints": [
+          "The color of fire trucks.",
+          "Roses are this color.",
+          "Three letters: R-E-D."
+        ]
+      },
+      {
+        "question": "What is your lucky number?",
+        "answer": "7",
+        "hints": [
+          "The most common 'lucky' number people pick.",
+          "Between 6 and 8.",
+          "It's 7!"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acct7",
+    "name": "Cipher Queen",
+    "username": "cipher_queen",
+    "password": "EncryptMe!",
+    "difficulty": "hard",
+    "hint": "Royalty of encryption. She guards secrets in the mountains.",
+    "loginHints": [
+      "Username is both words of her name with an underscore.",
+      "Her password is a command — she wants you to encrypt her!",
+      "Username: cipher_queen | Password: Encrypt + Me + punctuation (!)."
+    ],
+    "securityQuestions": [
+      {
+        "question": "What is your mother's maiden name?",
+        "answer": "Cryptwell",
+        "hints": [
+          "Think crypto/encryption + something deep.",
+          "Crypt + a word meaning a water source from the ground.",
+          "Crypt + Well = ?"
+        ]
+      },
+      {
+        "question": "What was the name of your first pet?",
+        "answer": "Enigma",
+        "hints": [
+          "A word meaning mystery or puzzle.",
+          "Also a famous WWII encryption machine.",
+          "Starts with E: Enigma."
+        ]
+      },
+      {
+        "question": "What state do you live in?",
+        "answer": "Colorado",
+        "hints": [
+          "A mountain state in the western US.",
+          "Home to the Rocky Mountains and Denver.",
+          "Starts with C, has 'rado' at the end."
+        ]
+      },
+      {
+        "question": "What year did you graduate?",
+        "answer": "2010",
+        "hints": [
+          "Sometime in the early 2010s decade... actually right at the start.",
+          "The year the decade turned — twenty-ten.",
+          "2-0-1-0."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acct8",
+    "name": "Zero Day Zach",
+    "username": "zach_zero",
+    "password": "Vu1n3r4bl3",
+    "difficulty": "hard",
+    "hint": "He finds vulnerabilities before anyone else. A beach-loving surfer dude.",
+    "loginHints": [
+      "Username is his first name + underscore + 'zero'.",
+      "The password is 'Vulnerable' but with numbers replacing some letters (l33t speak).",
+      "Username: zach_zero | Password: Vu1n3r4bl3 (Vulnerable in leet speak)."
+    ],
+    "securityQuestions": [
+      {
+        "question": "What is your favorite hobby?",
+        "answer": "Surfing",
+        "hints": [
+          "A beach activity involving waves.",
+          "You ride a board on ocean waves.",
+          "Starts with S — Surfing!"
+        ]
+      },
+      {
+        "question": "What is your dog's name?",
+        "answer": "Exploit",
+        "hints": [
+          "A hacking term for taking advantage of a weakness.",
+          "When you find a vulnerability, you use an ___.",
+          "Exploit — a security term!"
+        ]
+      },
+      {
+        "question": "What is your favorite movie?",
+        "answer": "Hackers",
+        "hints": [
+          "A 1995 movie about computer hackers.",
+          "The movie is literally about people who hack.",
+          "It's called 'Hackers' (1995)."
+        ]
+      },
+      {
+        "question": "What beach do you surf at?",
+        "answer": "Malibu",
+        "hints": [
+          "A famous California beach.",
+          "Celebrities love this beach near Los Angeles.",
+          "Starts with M — Malibu!"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acct9",
+    "name": "Jannett",
+    "username": "jannett.hodgeson",
+    "password": "bunny1989",
+    "difficulty": "hard",
+    "hint": "A more personal woman, but does love going out to eat near the Conference Center.",
+    "loginHints": [
+      "Her username is firstname.lastname format.",
+      "The password is her pet's name + a year (the year she was born? maybe...).",
+      "Username: jannett.hodgeson | Password: bunny + a year from the 1980s."
+    ],
+    "securityQuestions": [
+      {
+        "question": "When did you graduate?",
+        "answer": "1997",
+        "hints": [
+          "18 years after their birthday.",
+          "The year after 1996, before 1998.",
+          "1997."
+        ]
+      },
+      {
+        "question": "What is your favorite food?",
+        "answer": "Pizza",
+        "hints": [
+          "She goes out to eat something cheesy and sliced.",
+          "Round, has toppings, comes in a box.",
+          "Starts with P, has two Z's: Pizza."
+        ]
+      },
+      {
+        "question": "What breed is your dinosaur?",
+        "answer": "T-Rex",
+        "hints": [
+          "The king of the dinosaurs.",
+          "Short arms, big teeth.",
+          "T-Rex!"
+        ]
+      },
+      {
+        "question": "What is your dinosaur's name?",
+        "answer": "Bunny",
+        "hints": [
+          "A cute name for a not-so-cute creature.",
+          "Also a word for a small rabbit.",
+          "It's in the password! Bunny."
+        ]
+      }
+    ]
+  }
+]
