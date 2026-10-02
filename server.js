@@ -26,6 +26,32 @@ function loadAccounts() {
   return JSON.parse(data);
 }
 
+// Load player-facing clue artifacts (social posts + research papers)
+function loadClues() {
+  const data = fs.readFileSync(path.join(__dirname, 'data', 'clues.json'), 'utf8');
+  return JSON.parse(data);
+}
+
+// API: Get player-facing clue artifacts for the Clue Browser.
+// Never includes answers or the operator-only hints — just the "found" content.
+app.get('/api/clues', (req, res) => {
+  const accounts = loadAccounts();
+  const clues = loadClues();
+  const order = { easy: 0, medium: 1, hard: 2 };
+
+  const feed = accounts.map(account => {
+    const entry = (clues.accounts && clues.accounts[account.id]) || {};
+    return {
+      id: account.id,
+      name: account.name,
+      difficulty: account.difficulty,
+      artifacts: entry.artifacts || []
+    };
+  }).sort((a, b) => (order[a.difficulty] ?? 9) - (order[b.difficulty] ?? 9));
+
+  res.json(feed);
+});
+
 // API: Get all accounts (without sensitive info)
 app.get('/api/accounts', (req, res) => {
   const accounts = loadAccounts();

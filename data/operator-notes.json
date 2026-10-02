@@ -1,0 +1,67 @@
+{
+  "_comment": "OPERATOR / BOOTH-RUNNER ONLY. These are the extra hints that were removed from the hard accounts' player-facing clue artifacts so that solving stays challenging. Hand these out verbally or on a card ONLY when a team is truly stuck. This file is NOT linked from the player app and is NOT served by any player-facing endpoint. Reach it directly if you need it.",
+  "howToUse": [
+    "Hard accounts intentionally have NO giveaway hints in the Clue Browser.",
+    "Medium accounts use less-specific clues; let kids reason it out before helping.",
+    "Give out at most one extra hint at a time, starting from the top of each list."
+  ],
+  "accounts": {
+    "acct7": {
+      "name": "Cipher Queen",
+      "difficulty": "hard",
+      "username": "cipher_queen",
+      "password": "EncryptMe!",
+      "extraHints": {
+        "login": [
+          "Username is both words of her name joined by an underscore.",
+          "The password is a two-word command she gives you, ending in an exclamation mark.",
+          "Password: Encrypt + Me + !"
+        ],
+        "securityQuestions": [
+          { "question": "What is your mother's maiden name?", "answer": "Cryptwell", "extraHints": ["Crypt + a word for a dug water source.", "Crypt + Well."] },
+          { "question": "What was the name of your first pet?", "answer": "Enigma", "extraHints": ["A WWII code machine; also means a mystery.", "Starts with E."] },
+          { "question": "What state do you live in?", "answer": "Colorado", "extraHints": ["Rocky Mountain state, capital Denver.", "Starts with C, ends with 'rado'."] },
+          { "question": "What year did you graduate?", "answer": "2010", "extraHints": ["The year the decade turned.", "Twenty-ten: 2-0-1-0."] }
+        ]
+      }
+    },
+    "acct8": {
+      "name": "Zero Day Zach",
+      "difficulty": "hard",
+      "username": "zach_zero",
+      "password": "Vu1n3r4bl3",
+      "extraHints": {
+        "login": [
+          "Username is his first name + underscore + 'zero'.",
+          "The password is the word 'Vulnerable' written in leet speak (numbers for letters).",
+          "Password: Vu1n3r4bl3"
+        ],
+        "securityQuestions": [
+          { "question": "What is your favorite hobby?", "answer": "Surfing", "extraHints": ["Riding ocean waves on a board.", "Starts with S."] },
+          { "question": "What is your dog's name?", "answer": "Exploit", "extraHints": ["The security term for using a weakness.", "Starts with E."] },
+          { "question": "What is your favorite movie?", "answer": "Hackers", "extraHints": ["A 1995 film about computer hackers.", "The title is literally what they do."] },
+          { "question": "What beach do you surf at?", "answer": "Malibu", "extraHints": ["Famous celebrity beach near LA.", "Starts with M."] }
+        ]
+      }
+    },
+    "acct9": {
+      "name": "Jannett",
+      "difficulty": "hard",
+      "username": "jannett.hodgeson",
+      "password": "bunny1989",
+      "extraHints": {
+        "login": [
+          "Username is firstname.lastname (with a dot).",
+          "Password is her dinosaur's name + the year she was born (1980s).",
+          "Password: bunny + 1989"
+        ],
+        "securityQuestions": [
+          { "question": "When did you graduate?", "answer": "1997", "extraHints": ["18 years after she was born (1989 + 8... actually born 1979).", "Between 1996 and 1998."] },
+          { "question": "What is your favorite food?", "answer": "Pizza", "extraHints": ["Round, cheesy, sliced.", "Two Z's, starts with P."] },
+          { "question": "What breed is your dinosaur?", "answer": "T-Rex", "extraHints": ["King of the dinosaurs, short arms.", "T-Rex."] },
+          { "question": "What is your dinosaur's name?", "answer": "Bunny", "extraHints": ["A soft rabbit-like name.", "It's hidden in the password."] }
+        ]
+      }
+    }
+  }
+}

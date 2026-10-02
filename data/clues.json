@@ -1,0 +1,402 @@
+{
+  "_comment": "Player-facing clue artifacts rendered in the Clue Browser (public/browser.html). These are the fake social media posts, profiles, and research papers a social engineer would 'find'. Abstraction ramps with difficulty: easy = direct, medium = less specific, hard = subtle with NO giveaway hints. Operator-only extra hints for hard accounts live in data/operator-notes.json (not served to players).",
+  "accounts": {
+    "acct1": {
+      "name": "Captain Cyber",
+      "difficulty": "easy",
+      "artifacts": [
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@captain_cyber",
+          "displayName": "Captain Cyber 🦸",
+          "avatar": "🦸",
+          "time": "2h",
+          "body": "Everyone online calls me **captain_cyber**, but in person I'm just a proud Texan! 🤠",
+          "likes": 42,
+          "comments": 7
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@captain_cyber",
+          "displayName": "Captain Cyber 🦸",
+          "avatar": "🦸",
+          "time": "1d",
+          "body": "My pet flies higher than anyone. It blasts off like it's headed to space! 🚀 Best buddy ever.",
+          "likes": 88,
+          "comments": 14
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@captain_cyber",
+          "displayName": "Captain Cyber 🦸",
+          "avatar": "🦸",
+          "time": "3d",
+          "body": "Born and raised in the home of NASA! 'Houston, we have a problem' hits different when it's your hometown. 🏙️",
+          "likes": 61,
+          "comments": 9
+        }
+      ]
+    },
+    "acct2": {
+      "name": "Professor Pixel",
+      "difficulty": "easy",
+      "artifacts": [
+        {
+          "type": "social",
+          "platform": "SnapGram",
+          "handle": "@prof.pixel",
+          "displayName": "Professor Pixel 👾",
+          "avatar": "👾",
+          "time": "5h",
+          "body": "They call me 'prof' for short. Teaching the next generation about retro games! My handle is just prof + my name. 🕹️",
+          "likes": 120,
+          "comments": 20
+        },
+        {
+          "type": "social",
+          "platform": "SnapGram",
+          "handle": "@prof.pixel",
+          "displayName": "Professor Pixel 👾",
+          "avatar": "👾",
+          "time": "2d",
+          "body": "Nothing beats my favorite arcade game — a yellow circle chomping dots and running from ghosts! 👻🟡",
+          "likes": 200,
+          "comments": 31
+        },
+        {
+          "type": "social",
+          "platform": "SnapGram",
+          "handle": "@prof.pixel",
+          "displayName": "Professor Pixel 👾",
+          "avatar": "👾",
+          "time": "1w",
+          "body": "Throwback to my first school — Pixel Academy! Named after the tiny dots on a screen, just like me. 📺",
+          "likes": 95,
+          "comments": 12
+        }
+      ]
+    },
+    "acct3": {
+      "name": "Binary Betty",
+      "difficulty": "easy",
+      "artifacts": [
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@betty_binary",
+          "displayName": "Binary Betty 💾",
+          "avatar": "💾",
+          "time": "1h",
+          "body": "I think in ones and zeros! My username is just my first name, an underscore, then my last name. 0101",
+          "likes": 33,
+          "comments": 4
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@betty_binary",
+          "displayName": "Binary Betty 💾",
+          "avatar": "💾",
+          "time": "6h",
+          "body": "My cat has a number name — it's the digit that isn't zero! The one between zero and two. 🐱",
+          "likes": 77,
+          "comments": 11
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@betty_binary",
+          "displayName": "Binary Betty 💾",
+          "avatar": "💾",
+          "time": "2d",
+          "body": "Favorite food is round, cheesy, comes in slices and has two Z's in its name. 🍕 Yum!",
+          "likes": 150,
+          "comments": 22
+        }
+      ]
+    },
+    "acct4": {
+      "name": "Shadow Fox",
+      "difficulty": "medium",
+      "artifacts": [
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@shadowfox",
+          "displayName": "Shadow Fox 🦊",
+          "avatar": "🦊",
+          "time": "4h",
+          "body": "Out running again after dark. The night is when I feel most alive. 🌙",
+          "likes": 54,
+          "comments": 6
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@shadowfox",
+          "displayName": "Shadow Fox 🦊",
+          "avatar": "🦊",
+          "time": "1d",
+          "body": "Mom's family name always made me think of a dark forest — a color and what trees are made of, together. 🌲",
+          "likes": 29,
+          "comments": 8
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@shadowfox",
+          "displayName": "Shadow Fox 🦊",
+          "avatar": "🦊",
+          "time": "3d",
+          "body": "Grew up on a street named after a tree. I loved being the captain at the **helm** on that wooden playground.",
+          "likes": 41,
+          "comments": 15
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@shadowfox",
+          "displayName": "Shadow Fox 🦊",
+          "avatar": "🦊",
+          "time": "5d",
+          "body": "Favorite color? Mix red and blue and you've got it. The color of royalty. 👑",
+          "likes": 38,
+          "comments": 5
+        }
+      ]
+    },
+    "acct5": {
+      "name": "Dr. Glitch",
+      "difficulty": "medium",
+      "artifacts": [
+        {
+          "type": "social",
+          "platform": "SnapGram",
+          "handle": "@dr_glitch",
+          "displayName": "Dr. Glitch 🩺",
+          "avatar": "🩺",
+          "time": "3h",
+          "body": "People use my title and last name together to find me online. I fix the bugs nobody else can. 🐛🔧",
+          "likes": 66,
+          "comments": 9
+        },
+        {
+          "type": "paper",
+          "title": "On the Elimination of Software Defects by Direct Compression",
+          "authors": "Dr. Glitch",
+          "journal": "Journal of Debugging, Vol. 8",
+          "abstract": "My pet is named after the smallest unit of data made of eight bits — it sounds like something you do with your teeth. In this study we examine squashing bugs one at a time."
+        },
+        {
+          "type": "social",
+          "platform": "SnapGram",
+          "handle": "@dr_glitch",
+          "displayName": "Dr. Glitch 🩺",
+          "avatar": "🩺",
+          "time": "2d",
+          "body": "Go [REDACTED]! Our high school mascot was America's national bird — the big one that soars. 🦅",
+          "likes": 48,
+          "comments": 7
+        },
+        {
+          "type": "social",
+          "platform": "SnapGram",
+          "handle": "@dr_glitch",
+          "displayName": "Dr. Glitch 🩺",
+          "avatar": "🩺",
+          "time": "4d",
+          "body": "Studied in a big Massachusetts city — famous for a tea party and the Red Sox. ☕⚾",
+          "likes": 52,
+          "comments": 10
+        }
+      ]
+    },
+    "acct6": {
+      "name": "Frank",
+      "difficulty": "medium",
+      "artifacts": [
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@frank",
+          "displayName": "Frank 🧱",
+          "avatar": "🧱",
+          "time": "2h",
+          "body": "Keep it simple — just use my first name to find me. I block everything that comes my way! 🚫",
+          "likes": 25,
+          "comments": 3
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@frank",
+          "displayName": "Frank 🧱",
+          "avatar": "🧱",
+          "time": "1d",
+          "body": "Born in the city they call 'windy.' Deep dish pizza by the lake, nothing better. 🍕🌬️",
+          "likes": 60,
+          "comments": 12
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@frank",
+          "displayName": "Frank 🧱",
+          "avatar": "🧱",
+          "time": "3d",
+          "body": "New ride! Same color as a fire truck and a rose. 🚗 Love it.",
+          "likes": 71,
+          "comments": 14
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@frank",
+          "displayName": "Frank 🧱",
+          "avatar": "🧱",
+          "time": "6d",
+          "body": "My lucky number is the one most people pick — right between 6 and 8. 🎲",
+          "likes": 44,
+          "comments": 6
+        }
+      ]
+    },
+    "acct7": {
+      "name": "Cipher Queen",
+      "difficulty": "hard",
+      "artifacts": [
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@cipher_queen",
+          "displayName": "Cipher Queen 👑",
+          "avatar": "👑",
+          "time": "7h",
+          "body": "Secrets are safest in the high country. The mountain air keeps everything locked away. 🏔️",
+          "likes": 90,
+          "comments": 18
+        },
+        {
+          "type": "paper",
+          "title": "Hereditary Keys: A Family History of Secret-Keeping",
+          "authors": "C. Queen",
+          "journal": "Proceedings on Applied Cryptography",
+          "abstract": "My mother's family name joins the place where the dead are kept with a deep source of groundwater. Our lineage has guarded ciphers for generations across the Rocky range."
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@cipher_queen",
+          "displayName": "Cipher Queen 👑",
+          "avatar": "👑",
+          "time": "2d",
+          "body": "Still miss my first pet. Named after a famous wartime machine that scrambled messages — also just means a puzzle. 🧩",
+          "likes": 73,
+          "comments": 11
+        },
+        {
+          "type": "paper",
+          "title": "A Decade in Review: Encryption Standards at the Turn of the 2010s",
+          "authors": "C. Queen",
+          "journal": "Annual Cipher Review",
+          "abstract": "Looking back on my graduating cohort at the very start of this decade — the year the tens began. The work encrypts a plea in its very title."
+        }
+      ]
+    },
+    "acct8": {
+      "name": "Zero Day Zach",
+      "difficulty": "hard",
+      "artifacts": [
+        {
+          "type": "social",
+          "platform": "SnapGram",
+          "handle": "@zach_zero",
+          "displayName": "Zero Day Zach 🏄",
+          "avatar": "🏄",
+          "time": "5h",
+          "body": "Caught the best set of waves this morning. Riding the board is the only way to start the day. 🌊",
+          "likes": 112,
+          "comments": 19
+        },
+        {
+          "type": "paper",
+          "title": "Weaknesses Before Disclosure: Finding the Gap First",
+          "authors": "Z. Zach",
+          "journal": "Offensive Security Quarterly",
+          "abstract": "I find the weak spot before anyone else does. My dog shares his name with what you build to take advantage of such a weakness. My handle writes 'vulnerable' the way the keyboard-number crowd would."
+        },
+        {
+          "type": "social",
+          "platform": "SnapGram",
+          "handle": "@zach_zero",
+          "displayName": "Zero Day Zach 🏄",
+          "avatar": "🏄",
+          "time": "3d",
+          "body": "Movie night. A certain 1995 film about young computer breakers never gets old. 💻🎬",
+          "likes": 58,
+          "comments": 9
+        },
+        {
+          "type": "social",
+          "platform": "SnapGram",
+          "handle": "@zach_zero",
+          "displayName": "Zero Day Zach 🏄",
+          "avatar": "🏄",
+          "time": "1w",
+          "body": "Nothing beats my home break — the famous celebrity beach up the coast from LA. 🌴",
+          "likes": 134,
+          "comments": 25
+        }
+      ]
+    },
+    "acct9": {
+      "name": "Jannett",
+      "difficulty": "hard",
+      "artifacts": [
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@jannett.hodgeson",
+          "displayName": "Jannett H.",
+          "avatar": "🙂",
+          "time": "6h",
+          "body": "Love grabbing a bite near the Conference Center. I keep my circle small and my profile private. My handle is just my first and last name with a dot.",
+          "likes": 12,
+          "comments": 2
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@jannett.hodgeson",
+          "displayName": "Jannett H.",
+          "avatar": "🙂",
+          "time": "2d",
+          "body": "Finished school eighteen years after the year I was born. Hard to believe how time flies.",
+          "likes": 8,
+          "comments": 1
+        },
+        {
+          "type": "paper",
+          "title": "Companion Reptiles: Naming Conventions for Domesticated Theropods",
+          "authors": "J. Hodgeson",
+          "journal": "Modern Paleo-Pet Review",
+          "abstract": "My companion is the king of the dinosaurs — short arms, big teeth. I gave this fierce creature a soft, fluffy name you'd expect on a small hopping rabbit instead."
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@jannett.hodgeson",
+          "displayName": "Jannett H.",
+          "avatar": "🙂",
+          "time": "5d",
+          "body": "Dinner tonight: something cheesy, round, and sliced. A classic.",
+          "likes": 15,
+          "comments": 3
+        }
+      ]
+    }
+  }
+}

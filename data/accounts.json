@@ -108,7 +108,7 @@
     "loginHints": [
       "The username is both parts of their name stuck together, no spaces.",
       "The password combines nighttime + their hobby + a number.",
-      "Username: shadowfox | Password: Night + Run + the answer to life, the universe, and everything."
+      "Username: shadowfox | Password: NightRun + the answer to life, the universe, and everything. No spaces."
     ],
     "securityQuestions": [
       {
