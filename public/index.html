@@ -119,6 +119,49 @@
       </div>
     </section>
 
+    <!-- Admin Security Questions Section -->
+    <section id="admin-security-section" class="panel hidden">
+      <button class="back-btn" onclick="goBack()">← Back</button>
+      <h2>🔒 VIP Verification</h2>
+      <div class="target-info">
+        <p>Signed in as: <span id="admin-name" class="highlight"></span></p>
+        <p class="success-msg">Answer all verification questions to continue.</p>
+      </div>
+      <form id="admin-security-form" class="hack-form">
+        <div id="admin-questions-container">
+          <!-- Dynamically populated -->
+        </div>
+        <button type="submit" class="btn-hack">VERIFY →</button>
+      </form>
+      <p id="admin-security-error" class="error-msg hidden"></p>
+    </section>
+
+    <!-- Admin Win Screen -->
+    <section id="admin-win-section" class="panel hidden">
+      <div class="win-content">
+        <div class="win-animation">
+          <h2 class="access-granted glitch" data-text="ACCESS GRANTED">ACCESS GRANTED</h2>
+          <div class="trophy">👑</div>
+        </div>
+        <p class="win-text">VIP access unlocked.</p>
+        <button class="btn-hack" onclick="goBack()">← Back to Start</button>
+      </div>
+    </section>
+
+    <!-- Admin Login (bottom of page) -->
+    <section id="admin-login-section" class="panel admin-login-panel">
+      <h2>🔑 Admin Login</h2>
+      <p class="admin-login-sub">VIP access only.</p>
+      <form id="admin-login-form" class="hack-form">
+        <div class="form-group">
+          <label for="admin-username">Username:</label>
+          <input type="text" id="admin-username" placeholder="Enter admin username..." autocomplete="off">
+        </div>
+        <button type="submit" class="btn-hack">ADMIN LOGIN →</button>
+      </form>
+      <p id="admin-login-error" class="error-msg hidden"></p>
+    </section>
+
     <!-- Footer -->
     <footer>
       <p>Made with 💚 for Saintcon Family Night | Teaching kids about cybersecurity safety</p>

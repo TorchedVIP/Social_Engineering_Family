@@ -39,15 +39,17 @@ app.get('/api/clues', (req, res) => {
   const clues = loadClues();
   const order = { easy: 0, medium: 1, hard: 2 };
 
-  const feed = accounts.map(account => {
-    const entry = (clues.accounts && clues.accounts[account.id]) || {};
-    return {
-      id: account.id,
-      name: account.name,
-      difficulty: account.difficulty,
-      artifacts: entry.artifacts || []
-    };
-  }).sort((a, b) => (order[a.difficulty] ?? 9) - (order[b.difficulty] ?? 9));
+  const feed = accounts
+    .filter(account => !account.isAdmin)
+    .map(account => {
+      const entry = (clues.accounts && clues.accounts[account.id]) || {};
+      return {
+        id: account.id,
+        name: account.name,
+        difficulty: account.difficulty,
+        artifacts: entry.artifacts || []
+      };
+    }).sort((a, b) => (order[a.difficulty] ?? 9) - (order[b.difficulty] ?? 9));
 
   res.json(feed);
 });
@@ -55,12 +57,14 @@ app.get('/api/clues', (req, res) => {
 // API: Get all accounts (without sensitive info)
 app.get('/api/accounts', (req, res) => {
   const accounts = loadAccounts();
-  const safeAccounts = accounts.map(account => ({
-    id: account.id,
-    name: account.name,
-    difficulty: account.difficulty,
-    hint: account.hint || ''
-  }));
+  const safeAccounts = accounts
+    .filter(account => !account.isAdmin)
+    .map(account => ({
+      id: account.id,
+      name: account.name,
+      difficulty: account.difficulty,
+      hint: account.hint || ''
+    }));
   res.json(safeAccounts);
 });
 
@@ -160,6 +164,53 @@ app.post('/api/verify', (req, res) => {
     message: 'Some security answers are incorrect. Keep trying!',
     questionHints: questionHints,
     attemptNumber: att.security
+  });
+});
+
+// === ADMIN (VIP) ===
+// Username-only login. No password, no hints, no per-question highlighting.
+
+// API: Admin login (username only). Returns the security questions on match.
+app.post('/api/admin-login', (req, res) => {
+  const { username } = req.body;
+  const accounts = loadAccounts();
+  const admin = accounts.find(a => a.isAdmin);
+
+  if (!admin) {
+    return res.json({ success: false, message: 'Admin account not configured.' });
+  }
+
+  if ((username || '').trim().toLowerCase() === admin.username.toLowerCase()) {
+    const questions = admin.securityQuestions.map(q => ({ question: q.question }));
+    return res.json({ success: true, id: admin.id, name: admin.name, questions });
+  }
+
+  res.json({ success: false, message: 'Invalid admin username.' });
+});
+
+// API: Admin verify. All-or-nothing. Never reveals which answers were wrong,
+// and provides no hints.
+app.post('/api/admin-verify', (req, res) => {
+  const { answers } = req.body;
+  const accounts = loadAccounts();
+  const admin = accounts.find(a => a.isAdmin);
+
+  if (!admin) {
+    return res.json({ success: false, message: 'Admin account not configured.' });
+  }
+
+  const allCorrect = admin.securityQuestions.every((q, index) =>
+    q.answer.toLowerCase() === (answers[index] || '').trim().toLowerCase()
+  );
+
+  if (allCorrect) {
+    return res.json({ success: true, message: 'ACCESS GRANTED!' });
+  }
+
+  // Deliberately generic: no per-question results, no hints.
+  res.json({
+    success: false,
+    message: 'Access denied. One or more answers are incorrect.'
   });
 });
 

@@ -12,9 +12,20 @@
           "displayName": "Captain Cyber 🦸",
           "avatar": "🦸",
           "time": "2h",
-          "body": "Everyone online calls me **captain_cyber**, but in person I'm just a proud Texan! 🤠",
+          "body": "My username is my hero name joined by an underscore: **captain_cyber**. In person I'm just a proud Texan! 🤠",
           "likes": 42,
           "comments": 7
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@captain_cyber",
+          "displayName": "Captain Cyber 🦸",
+          "avatar": "🦸",
+          "time": "20h",
+          "body": "My password is two words stuck together — a **Star** that gives a **Shield** — then the number **99** right after. ⭐🛡️99",
+          "likes": 37,
+          "comments": 5
         },
         {
           "type": "social",
@@ -51,9 +62,20 @@
           "displayName": "Professor Pixel 👾",
           "avatar": "👾",
           "time": "5h",
-          "body": "They call me 'prof' for short. Teaching the next generation about retro games! My handle is just prof + my name. 🕹️",
+          "body": "They call me 'prof' for short. Teaching the next generation about retro games! My handle is **prof** and **pixel** joined by a dot: **prof.pixel** 🕹️",
           "likes": 120,
           "comments": 20
+        },
+        {
+          "type": "social",
+          "platform": "SnapGram",
+          "handle": "@prof.pixel",
+          "displayName": "Professor Pixel 👾",
+          "avatar": "👾",
+          "time": "18h",
+          "body": "My password: the number **8**, then the word **bit**, then the word **World** — all stuck together. Classic retro resolution! 🎮",
+          "likes": 108,
+          "comments": 16
         },
         {
           "type": "social",
@@ -90,9 +112,20 @@
           "displayName": "Binary Betty 💾",
           "avatar": "💾",
           "time": "1h",
-          "body": "I think in ones and zeros! My username is just my first name, an underscore, then my last name. 0101",
+          "body": "I think in ones and zeros! My username is my first name and last name joined by an underscore: **betty_binary**. 0101",
           "likes": 33,
           "comments": 4
+        },
+        {
+          "type": "social",
+          "platform": "ChirpBook",
+          "handle": "@betty_binary",
+          "displayName": "Binary Betty 💾",
+          "avatar": "💾",
+          "time": "4h",
+          "body": "My password spells it out: the word **Zero**, then the digit **1**, then the word **One**, then the digit **0** — all together. 💾",
+          "likes": 29,
+          "comments": 3
         },
         {
           "type": "social",
@@ -179,7 +212,7 @@
           "displayName": "Dr. Glitch 🩺",
           "avatar": "🩺",
           "time": "3h",
-          "body": "People use my title and last name together to find me online. I fix the bugs nobody else can. 🐛🔧",
+          "body": "Find me online under the handle on this profile. I fix the bugs nobody else can. 🐛🔧",
           "likes": 66,
           "comments": 9
         },
@@ -363,7 +396,7 @@
           "displayName": "Jannett H.",
           "avatar": "🙂",
           "time": "6h",
-          "body": "Love grabbing a bite near the Conference Center. I keep my circle small and my profile private. My handle is just my first and last name with a dot.",
+          "body": "Love grabbing a bite near the Conference Center. I keep my circle small and my profile private. 🙂",
           "likes": 12,
           "comments": 2
         },

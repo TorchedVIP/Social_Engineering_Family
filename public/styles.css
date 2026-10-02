@@ -634,3 +634,24 @@ footer {
   border-color: var(--red) !important;
   background: rgba(255, 51, 85, 0.05) !important;
 }
+
+/* === ADMIN LOGIN (bottom of page) === */
+.admin-login-panel {
+  margin-top: 10px;
+  border-color: var(--purple);
+  background: linear-gradient(180deg, rgba(180, 77, 255, 0.04), var(--bg-panel));
+}
+
+.admin-login-panel::before {
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+}
+
+.admin-login-panel h2 {
+  color: var(--purple);
+}
+
+.admin-login-sub {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+}

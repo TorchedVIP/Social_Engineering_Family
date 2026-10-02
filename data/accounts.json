@@ -5,11 +5,11 @@
     "username": "captain_cyber",
     "password": "StarShield99",
     "difficulty": "easy",
-    "hint": "captain_cyber online, Texan in-person.",
+    "hint": "captain_cyber online, Texan in-person. Their password is ⭐🛡️99. Their pet is out of this world!",
     "loginHints": [
       "Their username is their hero name smashed together with an underscore.",
       "The password is about stars and protection... with a number at the end.",
-      "Username: captain_cyber | Password ends with 99 and starts with Star..."
+      "Username: captain_cyber | Password: star______99..."
     ],
     "securityQuestions": [
       {
@@ -375,6 +375,22 @@
           "It's in the password! Bunny."
         ]
       }
+    ]
+  },
+  {
+    "id": "admin",
+    "name": "Admin (VIP)",
+    "username": "VIP",
+    "isAdmin": true,
+    "adminLogin": true,
+    "difficulty": "admin",
+    "securityQuestions": [
+      { "question": "What does your handle mean?", "answer": "vincent in person" },
+      { "question": "What is your favourite medical subject?", "answer": "immunology" },
+      { "question": "What's your favourite animal?", "answer": "duck" },
+      { "question": "Favourite movie?", "answer": "ender's game" },
+      { "question": "What's your favourite element?", "answer": "osmium" },
+      { "question": "What's the secret password?", "answer": "video" }
     ]
   }
 ]

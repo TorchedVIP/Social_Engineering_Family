@@ -14,6 +14,15 @@ const securityForm = document.getElementById('security-form');
 const loginError = document.getElementById('login-error');
 const securityError = document.getElementById('security-error');
 
+// Admin (VIP) elements
+const adminLoginSection = document.getElementById('admin-login-section');
+const adminSecuritySection = document.getElementById('admin-security-section');
+const adminWinSection = document.getElementById('admin-win-section');
+const adminLoginForm = document.getElementById('admin-login-form');
+const adminSecurityForm = document.getElementById('admin-security-form');
+const adminLoginError = document.getElementById('admin-login-error');
+const adminSecurityError = document.getElementById('admin-security-error');
+
 // === INITIALIZATION ===
 document.addEventListener('DOMContentLoaded', () => {
   loadAccounts();
@@ -42,8 +51,9 @@ function renderAccounts() {
 
 // === NAVIGATION ===
 function showSection(section) {
-  [introSection, accountsSection, loginSection, securitySection, winSection].forEach(s => {
-    s.classList.add('hidden');
+  [introSection, accountsSection, loginSection, securitySection, winSection,
+   adminLoginSection, adminSecuritySection, adminWinSection].forEach(s => {
+    if (s) s.classList.add('hidden');
   });
   section.classList.remove('hidden');
   
@@ -68,11 +78,19 @@ function goBack() {
   clearHints();
   loginForm.reset();
   securityForm.reset();
+  if (adminLoginForm) adminLoginForm.reset();
+  if (adminSecurityForm) adminSecurityForm.reset();
+  if (adminLoginError) adminLoginError.classList.add('hidden');
+  if (adminSecurityError) adminSecurityError.classList.add('hidden');
   introSection.classList.remove('hidden');
   accountsSection.classList.remove('hidden');
   loginSection.classList.add('hidden');
   securitySection.classList.add('hidden');
   winSection.classList.add('hidden');
+  if (adminSecuritySection) adminSecuritySection.classList.add('hidden');
+  if (adminWinSection) adminWinSection.classList.add('hidden');
+  // Admin login panel always lives at the bottom of the main view
+  if (adminLoginSection) adminLoginSection.classList.remove('hidden');
 }
 
 function resetToAccounts() {
@@ -97,6 +115,83 @@ function selectAccount(id) {
 function setupForms() {
   loginForm.addEventListener('submit', handleLogin);
   securityForm.addEventListener('submit', handleSecurity);
+  if (adminLoginForm) adminLoginForm.addEventListener('submit', handleAdminLogin);
+  if (adminSecurityForm) adminSecurityForm.addEventListener('submit', handleAdminSecurity);
+}
+
+// === ADMIN (VIP) FLOW ===
+async function handleAdminLogin(e) {
+  e.preventDefault();
+  const username = document.getElementById('admin-username').value.trim();
+
+  if (!username) {
+    showError(adminLoginError, 'Please enter the admin username.');
+    return;
+  }
+
+  try {
+    const response = await fetch('/api/admin-login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username })
+    });
+    const result = await response.json();
+
+    if (result.success) {
+      adminLoginError.classList.add('hidden');
+      document.getElementById('admin-name').textContent = result.name;
+      renderAdminQuestions(result.questions);
+      showSection(adminSecuritySection);
+    } else {
+      showError(adminLoginError, result.message || 'Invalid admin username.');
+    }
+  } catch (error) {
+    showError(adminLoginError, 'Connection error. Is the server running?');
+  }
+}
+
+function renderAdminQuestions(questions) {
+  const container = document.getElementById('admin-questions-container');
+  // No per-question status/hint elements — intentionally bare.
+  container.innerHTML = questions.map((q, index) => `
+    <div class="form-group">
+      <label for="admin-answer-${index}">${q.question}</label>
+      <input type="text" id="admin-answer-${index}" placeholder="Enter answer..." autocomplete="off">
+    </div>
+  `).join('');
+  adminSecurityError.classList.add('hidden');
+}
+
+async function handleAdminSecurity(e) {
+  e.preventDefault();
+  const inputs = document.querySelectorAll('#admin-questions-container input');
+  const answers = Array.from(inputs).map(input => input.value.trim());
+
+  if (answers.some(a => !a)) {
+    showError(adminSecurityError, 'Please answer all questions.');
+    return;
+  }
+
+  try {
+    const response = await fetch('/api/admin-verify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ answers })
+    });
+    const result = await response.json();
+
+    if (result.success) {
+      adminSecurityError.classList.add('hidden');
+      showSection(adminWinSection);
+      launchConfetti();
+      playWinSound();
+    } else {
+      // Generic failure only — no per-question highlighting, no hints.
+      showError(adminSecurityError, result.message || 'Access denied.');
+    }
+  } catch (error) {
+    showError(adminSecurityError, 'Connection error. Is the server running?');
+  }
 }
 
 async function handleLogin(e) {
