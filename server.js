@@ -103,9 +103,17 @@ app.post('/api/login', (req, res) => {
   const att = getAttempts(id);
   att.login++;
 
-  const hintIndex = Math.min(att.login, 3) - 1; // 0, 1, or 2
-  const loginHints = account.loginHints || [];
-  const hint = loginHints[hintIndex] || null;
+  let hint;
+  if (account.difficulty === 'hard') {
+    // HARD: no hint for the first 3 attempts, then exactly ONE vague hint
+    // (the same one from attempt 4 onward — never escalates, never adds more).
+    hint = att.login >= 4 ? (account.vagueHint || null) : null;
+  } else {
+    // EASY/MEDIUM: progressive escalating hints (hint 1, 2, then 3).
+    const hintIndex = Math.min(att.login, 3) - 1; // 0, 1, or 2
+    const loginHints = account.loginHints || [];
+    hint = loginHints[hintIndex] || null;
+  }
 
   res.json({
     success: false,
@@ -143,7 +151,11 @@ app.post('/api/verify', (req, res) => {
   const att = getAttempts(id);
   att.security++;
 
-  const hintIndex = Math.min(att.security, 3) - 1; // 0, 1, or 2
+  const isHard = account.difficulty === 'hard';
+  // HARD: no hint until after 3 failed attempts, then ONE vague hint per wrong
+  // question (same one from attempt 4 onward). EASY/MEDIUM: escalating hints.
+  const hardHintUnlocked = att.security >= 4;
+  const hintIndex = Math.min(att.security, 3) - 1; // 0, 1, or 2 (easy/medium)
 
   // Build per-question hints for wrong answers only
   const questionHints = account.securityQuestions.map((q, index) => {
@@ -151,11 +163,17 @@ app.post('/api/verify', (req, res) => {
     if (isCorrect) {
       return { questionIndex: index, correct: true, hint: null };
     }
-    const hints = q.hints || [];
+    let hint;
+    if (isHard) {
+      hint = hardHintUnlocked ? (q.vagueHint || null) : null;
+    } else {
+      const hints = q.hints || [];
+      hint = hints[hintIndex] || null;
+    }
     return {
       questionIndex: index,
       correct: false,
-      hint: hints[hintIndex] || null
+      hint: hint
     };
   });
 

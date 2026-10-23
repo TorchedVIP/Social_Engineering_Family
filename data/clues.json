@@ -300,24 +300,35 @@
     "acct7": {
       "name": "Cipher Queen",
       "difficulty": "hard",
+      "_note": "HARD: nothing is stated outright. Username/password never spelled out. Answers (Cryptwell, Enigma, Colorado, 2010) are buried in story and one near-match word in the news piece.",
       "artifacts": [
         {
-          "type": "social",
-          "platform": "ChirpBook",
-          "handle": "@cipher_queen",
-          "displayName": "Cipher Queen 👑",
-          "avatar": "👑",
-          "time": "7h",
-          "body": "Secrets are safest in the high country. The mountain air keeps everything locked away. 🏔️",
-          "likes": 90,
-          "comments": 18
+          "type": "blog",
+          "site": "Thin Air Journals",
+          "title": "Ten Years On, Still a Mile Above Everything",
+          "author": "C.Q.",
+          "date": "last autumn",
+          "body": "I moved up into the Rockies right out of school and never looked back. The license plates here, the thin air, the way Denver glitters at the foot of the range — it gets into you. This month my old class threw a reunion; it stunned me to count the rings and realize a full decade had turned over since we tossed our caps the year the twenty-tens began. Funny how a place that keeps so many secrets can also feel like home."
         },
         {
-          "type": "paper",
-          "title": "Hereditary Keys: A Family History of Secret-Keeping",
-          "authors": "C. Queen",
-          "journal": "Proceedings on Applied Cryptography",
-          "abstract": "My mother's family name joins the place where the dead are kept with a deep source of groundwater. Our lineage has guarded ciphers for generations across the Rocky range."
+          "type": "forum",
+          "board": "r/GenealogyPuzzles",
+          "title": "Stuck tracing my mother's side — the family is weirdly secretive",
+          "op": "cq_roots",
+          "body": "Her maiden line is impossible. Every record just points to the old family plot out past the farm — a cold stone resting-place up on the hill, and right beside it this ancient stone shaft they drew water from for generations. The two things sit together in every photo, like the name itself was built out of both.",
+          "replies": [
+            { "user": "archivist_mae", "body": "Old surnames did exactly that — smash two landmarks on the property into one word. What's near the grave site?" },
+            { "user": "cq_roots", "body": "A deep well. Been there two hundred years. Grandma said the name 'came up out of the ground with the water.'" }
+          ]
+        },
+        {
+          "type": "news",
+          "outlet": "The Summit Sentinel",
+          "section": "Local",
+          "headline": "Regional Cryptography Club Hosts Annual Puzzle Night",
+          "byline": "Staff Report",
+          "date": "Mar 3",
+          "preview": "Attendees gathered downtown for an evening of trivia, raffle prizes, and lukewarm coffee. Organizers thanked the volunteers, the catering team, and the parking attendants. One longtime member, described by friends as quiet and **enigmatic**, declined an interview but did win the door prize, a gift card nobody remembered donating. The event ran long and the chairs were uncomfortable."
         },
         {
           "type": "social",
@@ -326,108 +337,94 @@
           "displayName": "Cipher Queen 👑",
           "avatar": "👑",
           "time": "2d",
-          "body": "Still miss my first pet. Named after a famous wartime machine that scrambled messages — also just means a puzzle. 🧩",
+          "body": "Still think about my very first pet all the time. Back then I named everything after codebreaking machines from the old war films — this one more than earned the title. 🧩",
           "likes": 73,
           "comments": 11
-        },
-        {
-          "type": "paper",
-          "title": "A Decade in Review: Encryption Standards at the Turn of the 2010s",
-          "authors": "C. Queen",
-          "journal": "Annual Cipher Review",
-          "abstract": "Looking back on my graduating cohort at the very start of this decade — the year the tens began. The work encrypts a plea in its very title."
         }
       ]
     },
     "acct8": {
       "name": "Zero Day Zach",
       "difficulty": "hard",
+      "_note": "HARD: nothing stated outright. Answers (Surfing, Exploit, Hackers, Malibu) buried in story; one near-match word for the beach in the news piece.",
       "artifacts": [
         {
-          "type": "social",
-          "platform": "SnapGram",
-          "handle": "@zach_zero",
-          "displayName": "Zero Day Zach 🏄",
-          "avatar": "🏄",
-          "time": "5h",
-          "body": "Caught the best set of waves this morning. Riding the board is the only way to start the day. 🌊",
-          "likes": 112,
-          "comments": 19
+          "type": "review",
+          "store": "WaveHouse Boards",
+          "product": "DawnPatrol 6'2\" Shortboard",
+          "stars": 5,
+          "title": "Lives on my roof rack now",
+          "author": "Z.Z.",
+          "date": "2 months ago",
+          "body": "Out on the water before sunrise every single day, this thing carves like a dream. Only downside: my dog chewed the leash on day one. Fitting, honestly — I named him after the thing you unleash once you've found a crack in someone's defenses, the payload you fire through the gap. He takes advantage of every weakness in my fence too. 10/10 board, 2/10 dog behavior, would still ride at dawn forever."
         },
         {
-          "type": "paper",
-          "title": "Weaknesses Before Disclosure: Finding the Gap First",
-          "authors": "Z. Zach",
-          "journal": "Offensive Security Quarterly",
-          "abstract": "I find the weak spot before anyone else does. My dog shares his name with what you build to take advantage of such a weakness. My handle writes 'vulnerable' the way the keyboard-number crowd would."
+          "type": "mention",
+          "platform": "SnapGram",
+          "handle": "@surf_buddy_kai",
+          "displayName": "Kai 🌊",
+          "avatar": "🌊",
+          "time": "4d",
+          "body": "movie night at Z's again lol. he made us rewatch that grungy 1995 cult flick about teenage kids breaking into systems with dial-up modems. the title is literally just... what they are. he quotes every line. 💻",
+          "likes": 40,
+          "comments": 6
         },
         {
-          "type": "social",
-          "platform": "SnapGram",
-          "handle": "@zach_zero",
-          "displayName": "Zero Day Zach 🏄",
-          "avatar": "🏄",
-          "time": "3d",
-          "body": "Movie night. A certain 1995 film about young computer breakers never gets old. 💻🎬",
-          "likes": 58,
-          "comments": 9
+          "type": "news",
+          "outlet": "Coastline Weekly",
+          "section": "Lifestyle",
+          "headline": "Beach Cleanup Draws Dozens Despite Gray Skies",
+          "byline": "Shore Desk",
+          "date": "Jul 9",
+          "preview": "Volunteers collected bags of litter, posed for photos, and enjoyed free lemonade. The turnout was described as moderate. A local said the sand felt especially **malleable** underfoot this season, which experts attributed to tides. Organizers reminded everyone to reapply sunscreen and reminded them again twenty minutes later."
         },
         {
-          "type": "social",
-          "platform": "SnapGram",
-          "handle": "@zach_zero",
-          "displayName": "Zero Day Zach 🏄",
-          "avatar": "🏄",
-          "time": "1w",
-          "body": "Nothing beats my home break — the famous celebrity beach up the coast from LA. 🌴",
-          "likes": 134,
-          "comments": 25
+          "type": "classified",
+          "section": "Lost & Found — Coast County",
+          "title": "Found: Surf Leash + Dog Tag",
+          "body": "Picked up a chewed board leash near the famous celebrity beach up the coast from L.A. — the glitzy one the magazines won't stop writing about. Attached dog tag just says a single security-world word meaning 'the move that cashes in on a flaw.' Owner clearly spends every morning in the water. Come claim it.",
+          "contact": "front desk, WaveHouse"
         }
       ]
     },
     "acct9": {
       "name": "Jannett",
       "difficulty": "hard",
+      "_note": "HARD: she is private; almost nothing from her directly. Answers (grad 1997, Pizza, T-Rex, pet named Bunny) come from a reunion blog, an event RSVP, a classified, and a friend's mention. Password pieces (pet name + birth year 1989) are implied, never stated.",
       "artifacts": [
         {
-          "type": "social",
+          "type": "blog",
+          "site": "Class Notes & Catch-Ups",
+          "title": "Our Big Reunion Writeup",
+          "author": "Reunion Committee",
+          "date": "spring",
+          "body": "What a night! Hard to believe it's been this long since the Class of '97 walked the stage. A few of us did the math over dinner — most of the group was born in the back half of the eighties, give or take, so you can imagine the playlist. Jannett came out, which surprised everyone since she keeps to herself these days; she mostly talked about her pet and where to find the best slice near the convention district downtown."
+        },
+        {
+          "type": "event",
+          "title": "Midweek Meetup — Downtown Bites",
+          "when": "Thursday, 7:00 PM",
+          "where": "The corner spot by the Conference Center (you know the one — boxes, cheese, triangles)",
+          "body": "Casual hang. First round of the usual cheesy, round, sliced favorite is on the group.",
+          "attendees": ["Jannett H.", "two others"]
+        },
+        {
+          "type": "classified",
+          "section": "Neighborhood Board",
+          "title": "Lost: One Very Large 'Lap' Dinosaur",
+          "body": "Missing from the yard: the king of the lizards himself — enormous jaws, comically tiny arms, you can't miss him. Despite being the fiercest thing that ever lived, I gave him the softest, floppiest-eared, carrot-munching name imaginable (think hop-hop, not chomp-chomp). He answers only to that cuddly name. Reward offered.",
+          "contact": "J.H., keeps a small circle"
+        },
+        {
+          "type": "mention",
           "platform": "ChirpBook",
-          "handle": "@jannett.hodgeson",
-          "displayName": "Jannett H.",
-          "avatar": "🙂",
-          "time": "6h",
-          "body": "Love grabbing a bite near the Conference Center. I keep my circle small and my profile private. 🙂",
-          "likes": 12,
+          "handle": "@old_classmate_rae",
+          "displayName": "Rae 🌸",
+          "avatar": "🌸",
+          "time": "1w",
+          "body": "ran into Jannett downtown!! still obsessed with that giant dino of hers and STILL calls the big scary thing by that sweet little floppy-eared, hops-around-the-garden name 😂 some things never change since school.",
+          "likes": 9,
           "comments": 2
-        },
-        {
-          "type": "social",
-          "platform": "ChirpBook",
-          "handle": "@jannett.hodgeson",
-          "displayName": "Jannett H.",
-          "avatar": "🙂",
-          "time": "2d",
-          "body": "Finished school eighteen years after the year I was born. Hard to believe how time flies.",
-          "likes": 8,
-          "comments": 1
-        },
-        {
-          "type": "paper",
-          "title": "Companion Reptiles: Naming Conventions for Domesticated Theropods",
-          "authors": "J. Hodgeson",
-          "journal": "Modern Paleo-Pet Review",
-          "abstract": "My companion is the king of the dinosaurs — short arms, big teeth. I gave this fierce creature a soft, fluffy name you'd expect on a small hopping rabbit instead."
-        },
-        {
-          "type": "social",
-          "platform": "ChirpBook",
-          "handle": "@jannett.hodgeson",
-          "displayName": "Jannett H.",
-          "avatar": "🙂",
-          "time": "5d",
-          "body": "Dinner tonight: something cheesy, round, and sliced. A classic.",
-          "likes": 15,
-          "comments": 3
         }
       ]
     }

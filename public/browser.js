@@ -76,8 +76,19 @@ function renderFeed() {
 }
 
 function renderArtifact(a) {
-  if (a.type === 'paper') return renderPaper(a);
-  return renderSocial(a);
+  switch (a.type) {
+    case 'paper':      return renderPaper(a);
+    case 'blog':       return renderBlog(a);
+    case 'news':       return renderNews(a);
+    case 'mention':    return renderMention(a);
+    case 'review':     return renderReview(a);
+    case 'forum':      return renderForum(a);
+    case 'event':      return renderEvent(a);
+    case 'profile':    return renderProfile(a);
+    case 'classified': return renderClassified(a);
+    case 'social':
+    default:           return renderSocial(a);
+  }
 }
 
 function renderSocial(a) {
@@ -110,6 +121,141 @@ function renderPaper(a) {
       <div class="paper-journal">${escapeHtml(a.journal || '')}</div>
       <div class="paper-abstract-label">Abstract</div>
       <div class="paper-abstract">${formatText(a.abstract || '')}</div>
+    </div>
+  `;
+}
+
+// C — Personal blog post (replaces the old "research paper" vibe with a casual story).
+function renderBlog(a) {
+  return `
+    <div class="blog">
+      <span class="src-tag src-blog">✍️ Blog · ${escapeHtml(a.site || 'Personal Blog')}</span>
+      <div class="blog-title">${formatText(a.title || '')}</div>
+      <div class="blog-byline">by ${escapeHtml(a.author || '')}${a.date ? ' · ' + escapeHtml(a.date) : ''}</div>
+      <div class="blog-body">${formatText(a.body || '')}</div>
+    </div>
+  `;
+}
+
+// A — News article. Mostly-junk preview; bury a near-match word in the text.
+function renderNews(a) {
+  return `
+    <div class="news">
+      <div class="news-masthead">${escapeHtml(a.outlet || 'The Daily Standard')}</div>
+      <span class="src-tag src-news">📰 ${escapeHtml(a.section || 'News')}</span>
+      <div class="news-headline">${formatText(a.headline || '')}</div>
+      <div class="news-byline">${escapeHtml(a.byline || '')}${a.date ? ' · ' + escapeHtml(a.date) : ''}</div>
+      <div class="news-preview">${formatText(a.preview || '')}</div>
+      <div class="news-paywall">Subscribe to continue reading this article.</div>
+    </div>
+  `;
+}
+
+// B — A mention / reply from a DIFFERENT character talking about the target.
+function renderMention(a) {
+  return `
+    <div class="card mention-card">
+      <div class="mention-tag">💬 Mentioned by someone else</div>
+      <div class="post-header">
+        <div class="avatar">${escapeHtml(a.avatar || '👤')}</div>
+        <div class="post-meta">
+          <div class="post-name">${escapeHtml(a.displayName || '')}</div>
+          <div class="post-sub">${escapeHtml(a.handle || '')} · ${escapeHtml(a.time || '')}</div>
+        </div>
+        <span class="platform-tag">${escapeHtml(a.platform || 'Social')}</span>
+      </div>
+      <div class="post-body">${formatText(a.body || '')}</div>
+      <div class="post-actions">
+        <span>❤️ ${a.likes ?? 0}</span>
+        <span>💬 ${a.comments ?? 0}</span>
+        <span>🔁 Share</span>
+      </div>
+    </div>
+  `;
+}
+
+// D — Product review left on a store page.
+function renderReview(a) {
+  const stars = '★'.repeat(Math.max(0, Math.min(5, a.stars ?? 5))) +
+                '☆'.repeat(5 - Math.max(0, Math.min(5, a.stars ?? 5)));
+  return `
+    <div class="review">
+      <span class="src-tag src-review">🛒 ${escapeHtml(a.store || 'ShopEZ')} · Verified Review</span>
+      <div class="review-product">${escapeHtml(a.product || '')}</div>
+      <div class="review-stars">${stars}</div>
+      <div class="review-title">${formatText(a.title || '')}</div>
+      <div class="review-body">${formatText(a.body || '')}</div>
+      <div class="review-author">— ${escapeHtml(a.author || 'Anonymous')}${a.date ? ', ' + escapeHtml(a.date) : ''}</div>
+    </div>
+  `;
+}
+
+// E — Forum / Q&A thread.
+function renderForum(a) {
+  const replies = (a.replies || []).map(r => `
+    <div class="forum-reply">
+      <span class="forum-user">${escapeHtml(r.user || 'user')}</span>
+      <span class="forum-reply-body">${formatText(r.body || '')}</span>
+    </div>
+  `).join('');
+  return `
+    <div class="forum">
+      <span class="src-tag src-forum">🧵 ${escapeHtml(a.board || 'Forum')}</span>
+      <div class="forum-title">${formatText(a.title || '')}</div>
+      <div class="forum-op">
+        <span class="forum-user">${escapeHtml(a.op || 'original poster')}</span>
+        <span class="forum-op-body">${formatText(a.body || '')}</span>
+      </div>
+      ${replies}
+    </div>
+  `;
+}
+
+// F — Event / RSVP listing.
+function renderEvent(a) {
+  const going = (a.attendees || []).map(n => escapeHtml(n)).join(', ');
+  return `
+    <div class="event">
+      <span class="src-tag src-event">📅 Event</span>
+      <div class="event-title">${formatText(a.title || '')}</div>
+      <div class="event-meta">
+        ${a.when ? '<span>🕒 ' + escapeHtml(a.when) + '</span>' : ''}
+        ${a.where ? '<span>📍 ' + escapeHtml(a.where) + '</span>' : ''}
+      </div>
+      ${a.body ? '<div class="event-body">' + formatText(a.body) + '</div>' : ''}
+      ${going ? '<div class="event-going"><strong>Going:</strong> ' + going + '</div>' : ''}
+    </div>
+  `;
+}
+
+// H — Job listing / professional profile.
+function renderProfile(a) {
+  const items = (a.timeline || []).map(t => `<li>${formatText(t)}</li>`).join('');
+  return `
+    <div class="profile">
+      <span class="src-tag src-profile">💼 ${escapeHtml(a.site || 'WorkLink')}</span>
+      <div class="profile-head">
+        <div class="avatar">${escapeHtml(a.avatar || '🧑')}</div>
+        <div>
+          <div class="profile-name">${escapeHtml(a.name || '')}</div>
+          <div class="profile-headline">${formatText(a.headline || '')}</div>
+          ${a.location ? '<div class="profile-loc">📍 ' + escapeHtml(a.location) + '</div>' : ''}
+        </div>
+      </div>
+      ${a.about ? '<div class="profile-about">' + formatText(a.about) + '</div>' : ''}
+      ${items ? '<ul class="profile-timeline">' + items + '</ul>' : ''}
+    </div>
+  `;
+}
+
+// I — Classified / lost-and-found ad.
+function renderClassified(a) {
+  return `
+    <div class="classified">
+      <span class="src-tag src-classified">📌 ${escapeHtml(a.section || 'Classifieds')}</span>
+      <div class="classified-title">${formatText(a.title || '')}</div>
+      <div class="classified-body">${formatText(a.body || '')}</div>
+      ${a.contact ? '<div class="classified-contact">Contact: ' + escapeHtml(a.contact) + '</div>' : ''}
     </div>
   `;
 }

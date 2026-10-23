@@ -297,13 +297,8 @@ function showLoginHint(hint, attemptNumber) {
     loginForm.parentNode.insertBefore(hintBox, loginError.nextSibling);
   }
 
-  const hintLevel = Math.min(attemptNumber, 3);
   hintBox.innerHTML = `
-    <div class="hint-header">
-      <span class="hint-icon">💡</span>
-      <span>Hint ${hintLevel}/3</span>
-      <span class="hint-level-dots">${'●'.repeat(hintLevel)}${'○'.repeat(3 - hintLevel)}</span>
-    </div>
+    ${hintHeaderHtml(attemptNumber)}
     <p class="hint-text-content">${hint}</p>
   `;
   hintBox.classList.remove('hidden');
@@ -312,9 +307,30 @@ function showLoginHint(hint, attemptNumber) {
   hintBox.style.animation = 'hint-appear 0.4s ease forwards';
 }
 
-function showSecurityHints(questionHints, attemptNumber) {
+// Hint header varies by difficulty:
+// - hard: a single "Final Hint" (no 1/3 progression — there is only ever one)
+// - easy/medium: the escalating "Hint X/3" with progress dots
+function hintHeaderHtml(attemptNumber) {
+  if (currentAccount && currentAccount.difficulty === 'hard') {
+    return `
+      <div class="hint-header">
+        <span class="hint-icon">💡</span>
+        <span>Final Hint</span>
+        <span class="hint-level-dots">★</span>
+      </div>
+    `;
+  }
   const hintLevel = Math.min(attemptNumber, 3);
+  return `
+    <div class="hint-header">
+      <span class="hint-icon">💡</span>
+      <span>Hint ${hintLevel}/3</span>
+      <span class="hint-level-dots">${'●'.repeat(hintLevel)}${'○'.repeat(3 - hintLevel)}</span>
+    </div>
+  `;
+}
 
+function showSecurityHints(questionHints, attemptNumber) {
   questionHints.forEach((qh) => {
     const hintEl = document.getElementById(`hint-${qh.questionIndex}`);
     const statusEl = document.getElementById(`status-${qh.questionIndex}`);
@@ -337,11 +353,7 @@ function showSecurityHints(questionHints, attemptNumber) {
       
       if (qh.hint) {
         hintEl.innerHTML = `
-          <div class="hint-header">
-            <span class="hint-icon">💡</span>
-            <span>Hint ${hintLevel}/3</span>
-            <span class="hint-level-dots">${'●'.repeat(hintLevel)}${'○'.repeat(3 - hintLevel)}</span>
-          </div>
+          ${hintHeaderHtml(attemptNumber)}
           <p class="hint-text-content">${qh.hint}</p>
         `;
         hintEl.classList.remove('hidden');

@@ -236,10 +236,12 @@
       "Her password is a command — she wants you to encrypt her!",
       "Username: cipher_queen | Password: Encrypt + Me + punctuation (!)."
     ],
+    "vagueHint": "She tells you exactly what to do to her secrets — and ends it with a shout.",
     "securityQuestions": [
       {
         "question": "What is your mother's maiden name?",
         "answer": "Cryptwell",
+        "vagueHint": "Two things from the old family land, pushed into one name.",
         "hints": [
           "Think crypto/encryption + something deep.",
           "Crypt + a word meaning a water source from the ground.",
@@ -249,6 +251,7 @@
       {
         "question": "What was the name of your first pet?",
         "answer": "Enigma",
+        "vagueHint": "Old war films. Machines that scrambled messages.",
         "hints": [
           "A word meaning mystery or puzzle.",
           "Also a famous WWII encryption machine.",
@@ -258,6 +261,7 @@
       {
         "question": "What state do you live in?",
         "answer": "Colorado",
+        "vagueHint": "High up. Thin air. A range of famous mountains.",
         "hints": [
           "A mountain state in the western US.",
           "Home to the Rocky Mountains and Denver.",
@@ -267,6 +271,7 @@
       {
         "question": "What year did you graduate?",
         "answer": "2010",
+        "vagueHint": "The year a new decade clicked over.",
         "hints": [
           "Sometime in the early 2010s decade... actually right at the start.",
           "The year the decade turned — twenty-ten.",
@@ -287,10 +292,12 @@
       "The password is 'Vulnerable' but with numbers replacing some letters (l33t speak).",
       "Username: zach_zero | Password: Vu1n3r4bl3 (Vulnerable in leet speak)."
     ],
+    "vagueHint": "A word for 'easily attacked' — but typed the way a hacker swaps letters for numbers.",
     "securityQuestions": [
       {
         "question": "What is your favorite hobby?",
         "answer": "Surfing",
+        "vagueHint": "Dawn. A board. The ocean.",
         "hints": [
           "A beach activity involving waves.",
           "You ride a board on ocean waves.",
@@ -300,6 +307,7 @@
       {
         "question": "What is your dog's name?",
         "answer": "Exploit",
+        "vagueHint": "A security-world word: the move that cashes in on a flaw.",
         "hints": [
           "A hacking term for taking advantage of a weakness.",
           "When you find a vulnerability, you use an ___.",
@@ -309,6 +317,7 @@
       {
         "question": "What is your favorite movie?",
         "answer": "Hackers",
+        "vagueHint": "A 1995 cult film; the title is simply what the characters are.",
         "hints": [
           "A 1995 movie about computer hackers.",
           "The movie is literally about people who hack.",
@@ -318,6 +327,7 @@
       {
         "question": "What beach do you surf at?",
         "answer": "Malibu",
+        "vagueHint": "The glitzy celebrity beach up the coast from L.A.",
         "hints": [
           "A famous California beach.",
           "Celebrities love this beach near Los Angeles.",
@@ -338,10 +348,12 @@
       "The password is her pet's name + a year (the year she was born? maybe...).",
       "Username: jannett.hodgeson | Password: bunny + a year from the 1980s."
     ],
+    "vagueHint": "Her pet's cuddly name, stuck right onto the year she was born.",
     "securityQuestions": [
       {
         "question": "When did you graduate?",
         "answer": "1997",
+        "vagueHint": "Her class walked the stage in the late nineties.",
         "hints": [
           "18 years after their birthday.",
           "The year after 1996, before 1998.",
@@ -351,6 +363,7 @@
       {
         "question": "What is your favorite food?",
         "answer": "Pizza",
+        "vagueHint": "Cheesy, round, sliced — from the spot by the Conference Center.",
         "hints": [
           "She goes out to eat something cheesy and sliced.",
           "Round, has toppings, comes in a box.",
@@ -360,6 +373,7 @@
       {
         "question": "What breed is your dinosaur?",
         "answer": "T-Rex",
+        "vagueHint": "King of the lizards. Huge jaws, tiny arms.",
         "hints": [
           "The king of the dinosaurs.",
           "Short arms, big teeth.",
@@ -369,6 +383,7 @@
       {
         "question": "What is your dinosaur's name?",
         "answer": "Bunny",
+        "vagueHint": "The softest, floppy-eared, garden-hopping name you could give a monster.",
         "hints": [
           "A cute name for a not-so-cute creature.",
           "Also a word for a small rabbit.",

@@ -444,3 +444,161 @@ body {
   .url { font-size: 0.72rem; }
   .page { padding: 20px 14px 32px; }
 }
+
+/* === SHARED SOURCE TAG === */
+.src-tag {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.src-blog { background: #eef4ff; color: #2d5f9a; }
+.src-news { background: #f0f0f0; color: #333; }
+.src-review { background: #fff3e0; color: #a85b00; }
+.src-forum { background: #eafaf0; color: #1b8f5a; }
+.src-event { background: #fdeaf4; color: #b02a7a; }
+.src-profile { background: #eef7f9; color: #176b7d; }
+.src-classified { background: #f6f2e8; color: #7a6530; }
+
+/* === C — BLOG === */
+.blog {
+  background: #fff;
+  border: 1px solid #e2e8ef;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 2px 8px rgba(27, 39, 51, 0.05);
+}
+.blog-title { font-size: 1.25rem; font-weight: 700; color: #1b2733; line-height: 1.3; }
+.blog-byline { color: #8a97a4; font-size: 0.82rem; margin: 4px 0 12px; }
+.blog-body { color: #2c3a47; font-size: 0.95rem; line-height: 1.7; }
+
+/* === A — NEWS === */
+.news {
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-top: 4px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 20px 22px;
+  font-family: Georgia, 'Times New Roman', serif;
+  box-shadow: 0 2px 8px rgba(27, 39, 51, 0.05);
+}
+.news-masthead {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  color: #111;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.news-headline { font-size: 1.3rem; font-weight: 700; color: #111; line-height: 1.25; margin-bottom: 6px; }
+.news-byline { font-family: 'Inter', sans-serif; color: #888; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+.news-preview { color: #2a2a2a; font-size: 0.95rem; line-height: 1.7; }
+.news-paywall {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #ccc;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #a00;
+  font-style: italic;
+  text-align: center;
+}
+
+/* === B — MENTION === */
+.mention-card { border-left: 4px solid #2d7ff9; }
+.mention-tag {
+  background: #eaf2ff;
+  color: #2d7ff9;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 14px;
+}
+
+/* === D — REVIEW === */
+.review {
+  background: #fff;
+  border: 1px solid #e2e8ef;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(27, 39, 51, 0.05);
+}
+.review-product { font-weight: 700; color: #1b2733; font-size: 0.95rem; }
+.review-stars { color: #f5a623; font-size: 1.1rem; letter-spacing: 2px; margin: 4px 0; }
+.review-title { font-weight: 700; color: #26323e; margin-bottom: 4px; }
+.review-body { color: #2c3a47; font-size: 0.93rem; line-height: 1.6; }
+.review-author { color: #8a97a4; font-size: 0.8rem; margin-top: 10px; font-style: italic; }
+
+/* === E — FORUM === */
+.forum {
+  background: #fff;
+  border: 1px solid #e2e8ef;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(27, 39, 51, 0.05);
+}
+.forum-title { font-weight: 700; color: #1b2733; font-size: 1rem; margin-bottom: 10px; }
+.forum-op, .forum-reply {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  padding: 8px 0;
+  border-top: 1px solid #eef2f7;
+}
+.forum-op { border-top: none; }
+.forum-reply { padding-left: 18px; }
+.forum-user {
+  display: inline-block;
+  font-weight: 700;
+  color: #1b8f5a;
+  font-size: 0.82rem;
+  margin-right: 8px;
+}
+.forum-op-body, .forum-reply-body { color: #2c3a47; }
+
+/* === F — EVENT === */
+.event {
+  background: #fff;
+  border: 1px solid #e2e8ef;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(27, 39, 51, 0.05);
+}
+.event-title { font-weight: 700; color: #1b2733; font-size: 1.05rem; }
+.event-meta { display: flex; gap: 16px; flex-wrap: wrap; color: #5f6f7e; font-size: 0.85rem; margin: 8px 0; }
+.event-body { color: #2c3a47; font-size: 0.92rem; line-height: 1.6; margin-top: 6px; }
+.event-going { margin-top: 10px; font-size: 0.9rem; color: #26323e; }
+
+/* === H — PROFILE === */
+.profile {
+  background: #fff;
+  border: 1px solid #e2e8ef;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(27, 39, 51, 0.05);
+}
+.profile-head { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.profile-name { font-weight: 700; color: #1b2733; font-size: 1.05rem; }
+.profile-headline { color: #44525f; font-size: 0.9rem; }
+.profile-loc { color: #8a97a4; font-size: 0.8rem; }
+.profile-about { color: #2c3a47; font-size: 0.92rem; line-height: 1.6; margin-bottom: 8px; }
+.profile-timeline { margin: 0; padding-left: 20px; color: #2c3a47; font-size: 0.9rem; line-height: 1.6; }
+
+/* === I — CLASSIFIED === */
+.classified {
+  background: #fcfbf7;
+  border: 1px dashed #c9bfa0;
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-family: 'Courier New', monospace;
+}
+.classified-title { font-weight: 700; color: #4a3f22; font-size: 0.98rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.classified-body { color: #3a3220; font-size: 0.9rem; line-height: 1.6; margin-top: 6px; }
+.classified-contact { color: #7a6530; font-size: 0.82rem; margin-top: 8px; }
