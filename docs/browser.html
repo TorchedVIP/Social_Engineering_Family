@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClueNet Browser - Saintcon Family Night</title>
+  <link rel="stylesheet" href="browser.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Fake browser window -->
+  <div class="browser-window">
+
+    <!-- Title bar -->
+    <div class="title-bar">
+      <div class="traffic-lights">
+        <span class="light red"></span>
+        <span class="light yellow"></span>
+        <span class="light green"></span>
+      </div>
+      <div class="title-bar-text">ClueNet — Open Source Intelligence</div>
+    </div>
+
+    <!-- Tab strip -->
+    <div class="tab-strip">
+      <div class="tab active">
+        <span class="tab-favicon">🔎</span>
+        <span class="tab-title">ClueNet Feed</span>
+        <span class="tab-close">×</span>
+      </div>
+      <div class="tab-new">+</div>
+    </div>
+
+    <!-- Toolbar / address bar -->
+    <div class="toolbar">
+      <button class="nav-btn" title="Back">◀</button>
+      <button class="nav-btn" title="Forward">▶</button>
+      <button class="nav-btn" title="Reload" onclick="loadFeed()">⟳</button>
+      <div class="address-bar">
+        <span class="lock">🔒</span>
+        <span class="url">https://cluenet.example/osint/feed</span>
+      </div>
+      <a class="toolbar-link" href="index.html" title="Back to the Lab">🧪 Lab</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="page">
+      <div class="page-header">
+        <h1>🔎 ClueNet</h1>
+        <p class="tagline">What a social engineer might find lying around online.</p>
+      </div>
+
+      <!-- Difficulty filter -->
+      <div class="filter-bar" id="filter-bar">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" data-filter="easy">Easy</button>
+        <button class="filter-btn" data-filter="medium">Medium</button>
+        <button class="filter-btn" data-filter="hard">Hard</button>
+      </div>
+
+      <div class="hard-note" id="hard-note">
+        🔒 Hard targets show only real-looking posts and papers — no hints. If a team is truly
+        stuck, the booth operator has extra clues to hand out.
+      </div>
+
+      <!-- Feed -->
+      <div id="feed" class="feed">
+        <p class="loading">Loading feed…</p>
+      </div>
+
+      <!-- Prominent return-to-lab button -->
+      <div class="return-lab-wrap">
+        <a href="index.html" class="return-lab-btn">🧪 Back to the Lab →</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="browser.js"></script>
+</body>
+</html>
